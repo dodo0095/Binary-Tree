@@ -4,7 +4,6 @@ for word in open('tree.txt','r', encoding='utf-8-sig'):
     list2.append(word.strip())
 
 
-import numpy as np
 import math
 class TreeNode:
     def __init__(self, value):
@@ -322,7 +321,7 @@ for j in range(100):
         z=z+3
     testTree.maxDepth(testTree.root)
     testTree.aaaaa(testTree.root)
-    n,=np.shape(levelnumber)
+    n = len(levelnumber)
     kk=[[]]*n
     k=0
     for i in range(height,0,-1):
@@ -351,7 +350,7 @@ file.close()
 
 
 #已完成 3).
-file = open('left_boundary..txt','w')
+file = open('left_boundary.txt','w')
 for j in range(100):
     height=0
     testTree = Tree()
@@ -366,10 +365,10 @@ for j in range(100):
     m=height
     testTree.level(testTree.root)
     answer=[]
-    n,=np.shape(buf)
+    n = len(buf)
     for i in range(n):
         if buf[i][0]=="  ":
-            m,=np.shape(buf[i])
+            m = len(buf[i])
             for j in range(m-1):
                 if buf[i][j]!="  ":
             #print(buf[i][1])
@@ -378,7 +377,7 @@ for j in range(100):
         else:
             #print(buf[i][0])
             answer.append(buf[i][0])
-    n,=np.shape(answer)
+    n = len(answer)
     for i in range(n):
         file.write(str(answer[i])+" ")
     file.write("\n")
